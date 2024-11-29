@@ -11,6 +11,8 @@ services:
         - "8880:8080"
         environment:
             SSL_MODE: "off"
+            PHP_OPCACHE_ENABLE: "1"
+            PHP_OPCACHE_REVALIDATE_FREQ: "100000000"
         volumes:
             - .:/var/www/html
     nginx-unit:
@@ -25,6 +27,8 @@ services:
             - "8881:8080"
         environment:
             SSL_MODE: "off"
+            PHP_OPCACHE_ENABLE: "1"
+            PHP_OPCACHE_REVALIDATE_FREQ: "100000000"
         volumes:
             - .:/var/www/html
     octane:
@@ -39,5 +43,7 @@ services:
             - "8882:8080"
         environment:
             SSL_MODE: "off"
+            PHP_OPCACHE_ENABLE: "1"
+            PHP_OPCACHE_REVALIDATE_FREQ: "100000000"
         volumes:
             - .:/var/www/html
