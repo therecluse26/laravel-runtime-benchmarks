@@ -51,91 +51,91 @@ php-fpm (nginx) - 10 records (small load)
 Running 10s test @ http://localhost:8880/api/users?limit=10
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   159.88ms   35.63ms 337.52ms   70.64%
-    Req/Sec     7.05      2.59    10.00     51.01%
-  743 requests in 10.03s, 1.85MB read
-Requests/sec:     74.09
-Transfer/sec:    188.62KB
+    Latency     7.58ms    3.63ms  38.01ms   83.26%
+    Req/Sec   134.78     50.63   250.00     59.08%
+  16130 requests in 10.01s, 40.11MB read
+Requests/sec:   1611.27
+Transfer/sec:      4.01MB
 
 nginx unit - 10 records (small load)
 Running 10s test @ http://localhost:8881/api/users?limit=10
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   159.70ms   19.44ms 275.44ms   77.90%
-    Req/Sec     6.99      2.55    10.00     53.10%
-  742 requests in 10.03s, 1.69MB read
-Requests/sec:     73.98
-Transfer/sec:    173.03KB
+    Latency     4.88ms  386.20us  18.13ms   88.37%
+    Req/Sec   205.70      7.00   222.00     93.33%
+  24593 requests in 10.02s, 56.17MB read
+Requests/sec:   2454.43
+Transfer/sec:      5.61MB
 
 laravel octane swoole - 10 records (small load)
 Running 10s test @ http://localhost:8882/api/users?limit=10
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    12.66ms   29.41ms 311.02ms   96.04%
-    Req/Sec   145.26     93.08   353.00     64.46%
-  17073 requests in 10.06s, 54.21MB read
-Requests/sec:   1697.28
-Transfer/sec:      5.39MB
+    Latency     7.01ms   19.84ms 151.31ms   94.15%
+    Req/Sec   409.44     94.25   515.00     88.99%
+  48525 requests in 10.01s, 111.44MB read
+Requests/sec:   4847.39
+Transfer/sec:     11.13MB
 
 php-fpm (nginx) - 100 records (medium load)
 Running 10s test @ http://localhost:8880/api/users?limit=100
   12 threads and 12 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   188.47ms   61.90ms 441.46ms   79.28%
-    Req/Sec     6.12      2.70    10.00     52.68%
-  634 requests in 10.03s, 5.36MB read
-Requests/sec:     63.21
-Transfer/sec:    547.37KB
+^@  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.20ms    2.66ms  20.27ms   69.89%
+    Req/Sec   122.38     29.32   181.00     64.00%
+  14646 requests in 10.01s, 123.87MB read
+Requests/sec:   1462.89
+Transfer/sec:     12.37MB
 
 nginx unit - 100 records (medium load)
 Running 10s test @ http://localhost:8881/api/users?limit=100
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   184.67ms   31.85ms 374.05ms   76.66%
-    Req/Sec     5.80      2.33    10.00     70.02%
-  647 requests in 10.04s, 5.34MB read
-Requests/sec:     64.41
-Transfer/sec:    544.04KB
+    Latency     6.40ms    1.05ms  19.42ms   79.06%
+    Req/Sec   156.79     14.63   180.00     82.58%
+  18773 requests in 10.02s, 154.85MB read
+Requests/sec:   1873.31
+Transfer/sec:     15.45MB
 
 laravel octane swoole - 100 records (medium load)
 Running 10s test @ http://localhost:8882/api/users?limit=100
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    12.52ms   30.22ms 278.31ms   95.85%
-    Req/Sec   147.51     28.71   198.00     86.75%
-  17248 requests in 10.03s, 142.46MB read
-Requests/sec:   1719.50
-Transfer/sec:     14.20MB
+    Latency     7.03ms   16.51ms 155.64ms   95.94%
+    Req/Sec   249.34     46.75   323.00     84.14%
+  29503 requests in 10.01s, 243.69MB read
+Requests/sec:   2946.97
+Transfer/sec:     24.34MB
 
 php-fpm (nginx) - 1000 records (high load)
 Running 10s test @ http://localhost:8880/api/users?limit=1000
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   228.17ms   64.05ms 431.17ms   74.28%
-    Req/Sec     4.76      2.01    10.00     83.11%
-  521 requests in 10.02s, 35.54MB read
-Requests/sec:     51.99
-Transfer/sec:      3.55MB
+    Latency    24.82ms    6.75ms  51.13ms   70.01%
+    Req/Sec    40.27      9.64    70.00     39.08%
+  4832 requests in 10.01s, 329.65MB read
+Requests/sec:    482.79
+Transfer/sec:     32.94MB
 
 nginx unit - 1000 records (high load)
 Running 10s test @ http://localhost:8881/api/users?limit=1000
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   205.00ms   27.19ms 374.02ms   77.49%
-    Req/Sec     4.96      1.57    10.00     81.10%
-  582 requests in 10.06s, 39.58MB read
-Requests/sec:     57.88
-Transfer/sec:      3.94MB
+    Latency    21.09ms    2.71ms  37.15ms   65.52%
+    Req/Sec    47.40      5.01    60.00     68.83%
+  5690 requests in 10.01s, 386.91MB read
+Requests/sec:    568.17
+Transfer/sec:     38.63MB
 
 laravel octane swoole - 1000 records (high load)
 Running 10s test @ http://localhost:8882/api/users?limit=1000
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    31.29ms   14.89ms 288.53ms   97.46%
-    Req/Sec    33.11      6.84    50.00     59.83%
-  3961 requests in 10.04s, 269.39MB read
-Requests/sec:    394.52
-Transfer/sec:     26.83MB
+    Latency    20.45ms    8.29ms 171.73ms   98.96%
+    Req/Sec    50.07      9.65    80.00     35.79%
+  5996 requests in 10.01s, 407.79MB read
+Requests/sec:    598.84
+Transfer/sec:     40.73MB
 
 Testing complex db record lookups (2 layers of relations)
 
@@ -143,92 +143,90 @@ php-fpm (nginx) - 10 records (small load)
 Running 10s test @ http://localhost:8880/api/comments?limit=10
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   207.23ms   55.92ms 435.08ms   77.26%
-    Req/Sec     5.30      2.12    10.00     67.30%
-  575 requests in 10.02s, 7.47MB read
-Requests/sec:     57.40
-Transfer/sec:    763.40KB
+    Latency    17.96ms    5.44ms  39.26ms   73.74%
+    Req/Sec    55.68     14.00    90.00     46.92%
+  6682 requests in 10.01s, 86.80MB read
+Requests/sec:    667.28
+Transfer/sec:      8.67MB
 
 nginx unit - 10 records (small load)
 Running 10s test @ http://localhost:8881/api/comments?limit=10
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   190.83ms   21.02ms 297.16ms   71.59%
-    Req/Sec     5.44      1.91    10.00     79.94%
-  623 requests in 10.05s, 7.96MB read
-Requests/sec:     61.98
-Transfer/sec:    811.07KB
+    Latency    14.74ms    2.06ms  51.43ms   82.95%
+    Req/Sec    67.89      6.35    80.00     71.92%
+  8149 requests in 10.01s, 104.14MB read
+Requests/sec:    813.94
+Transfer/sec:     10.40MB
 
 laravel octane swoole - 10 records (small load)
 Running 10s test @ http://localhost:8882/api/comments?limit=10
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    21.38ms   25.79ms 383.51ms   97.29%
-    Req/Sec    55.67     11.44    80.00     72.47%
-  6587 requests in 10.04s, 84.26MB read
-Requests/sec:    656.24
-Transfer/sec:      8.39MB
+    Latency    13.37ms   12.51ms 177.70ms   98.06%
+    Req/Sec    83.50     12.94   111.00     67.84%
+  9960 requests in 10.01s, 127.40MB read
+Requests/sec:    994.78
+Transfer/sec:     12.72MB
 
 php-fpm (nginx) - 100 records (medium load)
 Running 10s test @ http://localhost:8880/api/comments?limit=100
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   355.08ms   81.14ms 646.39ms   72.07%
-    Req/Sec     2.63      0.87     5.00     87.69%
-  333 requests in 10.02s, 36.05MB read
-Requests/sec:     33.22
-Transfer/sec:      3.60MB
+    Latency   108.53ms   29.86ms 219.09ms   75.14%
+    Req/Sec     9.79      2.96    20.00     80.52%
+  1102 requests in 10.01s, 119.31MB read
+Requests/sec:    110.06
+Transfer/sec:     11.92MB
 
 nginx unit - 100 records (medium load)
 Running 10s test @ http://localhost:8881/api/comments?limit=100
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   318.01ms   40.23ms 470.64ms   72.16%
-    Req/Sec     2.89      0.73     5.00     69.46%
-  370 requests in 10.02s, 39.97MB read
-Requests/sec:     36.91
-Transfer/sec:      3.99MB
+    Latency    96.47ms   10.18ms 151.27ms   71.51%
+    Req/Sec    10.45      2.54    20.00     91.36%
+  1239 requests in 10.02s, 133.85MB read
+Requests/sec:    123.68
+Transfer/sec:     13.36MB
 
 laravel octane swoole - 100 records (medium load)
 Running 10s test @ http://localhost:8882/api/comments?limit=100
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   143.98ms   29.38ms 430.88ms   78.95%
-    Req/Sec     7.76      2.61    10.00     58.53%
-  832 requests in 10.05s, 89.89MB read
-Requests/sec:     82.82
-Transfer/sec:      8.95MB
+    Latency   100.79ms   19.22ms 269.12ms   70.03%
+    Req/Sec    10.20      2.84    20.00     86.83%
+  1187 requests in 10.03s, 128.25MB read
+Requests/sec:    118.31
+Transfer/sec:     12.78MB
 
 php-fpm (nginx) - 1000 records (high load)
 Running 10s test @ http://localhost:8880/api/comments?limit=1000
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     1.53s   296.69ms   1.99s    69.23%
-    Req/Sec     0.05      0.22     1.00     95.16%
-  62 requests in 10.02s, 66.56MB read
-  Socket errors: connect 0, read 0, write 0, timeout 23
-Requests/sec:      6.19
-Transfer/sec:      6.64MB
+    Latency     1.01s   256.60ms   1.93s    72.81%
+    Req/Sec     0.54      0.50     1.00     53.51%
+  114 requests in 10.02s, 122.39MB read
+Requests/sec:     11.38
+Transfer/sec:     12.22MB
 
 nginx unit - 1000 records (high load)
 Running 10s test @ http://localhost:8881/api/comments?limit=1000
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     1.63s    97.95ms   1.81s    62.50%
-    Req/Sec     0.00      0.00     0.00    100.00%
-  60 requests in 10.05s, 64.37MB read
-  Socket errors: connect 0, read 0, write 0, timeout 12
-Requests/sec:      5.97
-Transfer/sec:      6.41MB
+    Latency   976.90ms  143.57ms   1.40s    69.75%
+    Req/Sec     0.51      0.50     1.00     51.26%
+  119 requests in 10.04s, 127.68MB read
+Requests/sec:     11.85
+Transfer/sec:     12.72MB
 
 laravel octane swoole - 1000 records (high load)
 Running 10s test @ http://localhost:8882/api/comments?limit=1000
   12 threads and 12 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     1.33s   101.26ms   1.55s    63.93%
-    Req/Sec     0.00      0.00     0.00    100.00%
-  73 requests in 10.03s, 78.32MB read
-  Socket errors: connect 0, read 0, write 0, timeout 12
-Requests/sec:      7.28
-Transfer/sec:      7.81MB
+    Latency     1.10s   252.09ms   1.86s    78.64%
+    Req/Sec     0.26      0.44     1.00     74.04%
+  104 requests in 10.06s, 111.59MB read
+  Socket errors: connect 0, read 0, write 0, timeout 1
+Requests/sec:     10.34
+Transfer/sec:     11.09MB
 ```
